@@ -1,0 +1,29 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`${SITE_TITLE} — Education`} description="Academic background and certifications." />
+        <title>{SITE_TITLE} — Education</title>
+    </head>
+	<body>
+		<Header />
+		<main>
+			<h1>Education</h1>
+			<section>
+				<h2>Technical University Vienna (TU Wien) — B.Sc, Computer Science - Software Engineering</h2>
+				<p>Currently inrolled in the university and focusing on Software Engineering.</p>
+			</section>
+            <section>
+                <h2>Higher Technical College Vienna West (HTL Wien West) </h2>
+                <p>Graduated with honours. Focus on software development, media technology and computer science.</p>
+            </section>
+		</main>
+		<Footer />
+	</body>
+</html>

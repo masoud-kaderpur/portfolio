@@ -1,0 +1,22 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`${SITE_TITLE} — Contact`} description="Contact information and social links." />
+        <title>{SITE_TITLE} — Contact</title>
+    </head>
+	<body>
+		<Header/>
+		<main>
+			<h1>Contact</h1>
+			<p>For inquiries, consulting, or collaborations, reach out via <a href="mailto:hello@example.com">hello@example.com</a> or connect on <a href="https://github.com/masoud-kaderpur" target="_blank">GitHub</a> and <a href="#">LinkedIn</a>.</p>
+		</main>
+		<Footer />
+	</body>
+</html>

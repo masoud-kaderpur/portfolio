@@ -1,0 +1,30 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`${SITE_TITLE} — Projects`} description="Selected projects and case studies." />
+        <title>{SITE_TITLE} — Projects</title>
+    </head>
+	<body>
+		<Header />
+		<main>
+			<h1>Projects</h1>
+			<p>Selected projects demonstrating architecture, scale, and measurable impact.</p>
+			<section class="projects-grid">
+				<ProjectCard title="CrypticCore Engine" description="CrypticCore is a high-performance Java-based encryption engine designed for memory-efficient file transformation. It implements a decoupled architecture that separates the cryptographic logic from the data streaming process." tech={["Java"]} href="https://github.com/masoud-kaderpur/CrypticCore-Engine" />
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;padding:1rem}
+</style>

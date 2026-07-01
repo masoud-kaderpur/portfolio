@@ -1,0 +1,16 @@
+---
+type Props = { title: string; description: string; tech?: string[]; href?: string };
+const { title, description, tech = [], href = '#' } = Astro.props;
+---
+
+<a class="project-card" href={href}>
+	<h3>{title}</h3>
+	<p>{description}</p>
+	{tech.length ? <p class="tech">{tech.join(' · ')}</p> : null}
+</a>
+
+<style>
+.project-card{display:block;padding:1rem;border:1px solid rgba(0,0,0,0.08);border-radius:8px;text-decoration:none;color:inherit}
+.project-card h3{margin:0 0 .25rem}
+.project-card .tech{color:gray;font-size:.9rem;margin-top:.5rem}
+</style>
