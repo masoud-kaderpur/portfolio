@@ -28,12 +28,12 @@
 	"private": true,
 	"scripts": {
 		"astro": "astro",
-		"build": "astro build",
+		"build": "NODE_ENV=production astro build",
 		"cf-typegen": "wrangler types",
-		"check": "astro build && tsc && wrangler deploy --dry-run",
+		"check": "NODE_ENV=production astro build && tsc && wrangler deploy --dry-run",
 		"deploy": "wrangler deploy",
 		"dev": "astro dev",
-		"preview": "astro build && wrangler dev"
+		"preview": "NODE_ENV=production astro build && wrangler dev"
 	},
 	"type": "module",
 	"allowScripts": {

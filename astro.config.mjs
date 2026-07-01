@@ -14,11 +14,7 @@ export default defineConfig({
 	// errors during `astro dev` where the build output doesn't exist yet.
 	...(isProd
 		? {
-			adapter: cloudflare({
-				platformProxy: {
-					enabled: true,
-				},
-			}),
+			adapter: cloudflare(),
 		}
 		: {}),
 });
