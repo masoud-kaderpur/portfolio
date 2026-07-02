@@ -200,3 +200,7 @@ dist
 
 ### Astro ###
 .astro/
+
+### Intellij IDEA ###
+# User-specific stuff
+.idea
